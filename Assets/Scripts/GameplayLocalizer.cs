@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 public class GameplayLocalizer : MonoBehaviour
@@ -8,9 +9,12 @@ public class GameplayLocalizer : MonoBehaviour
 
     public TextAsset dataSheet;
 
-    Dictionary<string, GameplayLocalizer> data;
+    private Language currentLanguage;
+    public Language defaultLanguage;
 
-    public static event Action<string> OnLanguageChange;
+    Dictionary<string, LanguageData> data; // Text data from CSV
+
+    public static event Action OnLanguageChange;
 
     private void Awake()
     {
@@ -20,16 +24,40 @@ public class GameplayLocalizer : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         else Destroy(gameObject);
+
+        LoadLanguageSheet();
+    }
+    public static string GetText(string textKey)
+    {
+        return Instance.data[textKey].GetText(Instance.currentLanguage);
     }
 
-    void Start()
+    public static void SetLanguage(Language language)
     {
-        OnLanguageChange?.Invoke("");
+        Instance.currentLanguage = language;
+
+        OnLanguageChange?.Invoke();
     }
 
-    // Update is called once per frame
-    void Update()
+    void LoadLanguageSheet()
     {
-        
+        string[] lines = dataSheet.text.Split('\n');
+
+        for (int i = 1; i < lines.Length; i++)
+        {
+            if (lines.Length > 1) AddLanguageData(lines[i]);
+        }
+    }
+
+    void AddLanguageData(string str)
+    {
+        // Lazy initialization
+        if (data == null) data = new Dictionary<string, LanguageData>();
+
+        string[] entries = str.Split(';');
+
+        var languageData = new LanguageData(entries);
+
+        data.Add(entries[0], languageData);
     }
 }
