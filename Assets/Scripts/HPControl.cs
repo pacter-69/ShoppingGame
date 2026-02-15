@@ -7,6 +7,7 @@ public class HPControl : MonoBehaviour
     int HP = 100;
     public static event Action<int> OnHPChange;
     public static event Action OnDeath;
+    public static bool alive = true;
 
 
     void OnDamage()
@@ -14,8 +15,14 @@ public class HPControl : MonoBehaviour
         HP--;
         if (HP == 0)
         {
-            OnDeath?.Invoke();
+            Death();
         }
         OnHPChange?.Invoke(HP);
+    }
+
+    void Death()
+    {
+        alive = false;
+        OnDeath?.Invoke();
     }
 }
