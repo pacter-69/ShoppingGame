@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.SocialPlatforms.Impl;
 
 public class HPControl : MonoBehaviour
 {
     int HP = 100;
     public static event Action<int> OnHPChange;
-    public static event Action OnDeath;
+    public static event Action<bool> OnDeath;
     public static bool alive = true;
 
 
@@ -15,7 +16,7 @@ public class HPControl : MonoBehaviour
         HP--;
         if (HP == 0)
         {
-            Death();
+            SceneManager.LoadScene("Ending");
         }
         OnHPChange?.Invoke(HP);
     }
@@ -23,6 +24,6 @@ public class HPControl : MonoBehaviour
     void Death()
     {
         alive = false;
-        OnDeath?.Invoke();
+        OnDeath?.Invoke(true);
     }
 }

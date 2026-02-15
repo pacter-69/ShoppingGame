@@ -12,12 +12,9 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
-    public void ChangeToEnding()
+    public void ChangeToEnding(bool a)
     {
-        if (!HPControl.alive)
-        {
-            SceneManager.LoadScene("Ending");
-        }
+        SceneManager.LoadScene("Ending");
     }
 
     void OnChangeGameplay()
