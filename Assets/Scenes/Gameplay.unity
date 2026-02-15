@@ -861,6 +861,7 @@ GameObject:
   - component: {fileID: 1056100432}
   - component: {fileID: 1056100434}
   - component: {fileID: 1056100433}
+  - component: {fileID: 1056100435}
   m_Layer: 5
   m_Name: TextBuy
   m_TagString: Untagged
@@ -987,6 +988,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1056100431}
   m_CullTransparentMesh: 0
+--- !u!114 &1056100435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056100431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c0e71d3d8521e4db0e4802ba919418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizeText
+  TextKey: GAMEPLAY_MENU_BUY
 --- !u!1 &1129235635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1580,6 +1594,7 @@ GameObject:
   - component: {fileID: 1426316715}
   - component: {fileID: 1426316717}
   - component: {fileID: 1426316716}
+  - component: {fileID: 1426316718}
   m_Layer: 5
   m_Name: TextSell
   m_TagString: Untagged
@@ -1706,6 +1721,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426316714}
   m_CullTransparentMesh: 0
+--- !u!114 &1426316718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426316714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93c0e71d3d8521e4db0e4802ba919418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizeText
+  TextKey: GAMEPLAY_MENU_SELL
 --- !u!1 &1537411338
 GameObject:
   m_ObjectHideFlags: 0
