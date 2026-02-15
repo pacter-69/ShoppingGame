@@ -8,9 +8,12 @@ public class GameplayLocalizer : MonoBehaviour
 
     public TextAsset dataSheet;
 
-    Dictionary<string, GameplayLocalizer> data;
+    private Language currentLanguage;
+    public Language DefaultLanguage;
 
-    public static event Action<string> OnLanguageChange;
+    Dictionary<string, LanguageData> Data; // Text data from CSV
+
+    public static event Action OnLanguageChange;
 
     private void Awake()
     {
@@ -24,7 +27,7 @@ public class GameplayLocalizer : MonoBehaviour
 
     void Start()
     {
-        OnLanguageChange?.Invoke("");
+        
     }
 
     // Update is called once per frame
