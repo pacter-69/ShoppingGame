@@ -10,7 +10,7 @@ public class LocalizeText : MonoBehaviour
     void Start()
     {
         textValue = GetComponent<Text>();
-        //textValue.text = GameplayLocalizer.Instance.GetText(TextKey);
+        textValue.text = GameplayLocalizer.GetText(TextKey);
     }
 
     private void OnEnable()
@@ -25,6 +25,6 @@ public class LocalizeText : MonoBehaviour
 
     private void ChangeLanguage()
     {
-        //textValue.text = GameplayLocalizer.Instance.GetText(TextKey);
+        textValue.text = GameplayLocalizer.GetText(TextKey);
     }
 }
