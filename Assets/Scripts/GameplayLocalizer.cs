@@ -12,7 +12,7 @@ public class GameplayLocalizer : MonoBehaviour
     private Language currentLanguage;
     public Language defaultLanguage;
 
-    Dictionary<string, LanguageData> data; // Text data from CSV
+    Dictionary<string, LanguageData> data;
 
     public static event Action OnLanguageChange;
 
@@ -25,8 +25,11 @@ public class GameplayLocalizer : MonoBehaviour
         }
         else Destroy(gameObject);
 
+        currentLanguage = defaultLanguage;
+
         LoadLanguageSheet();
     }
+
     public static string GetText(string textKey)
     {
         return Instance.data[textKey].GetText(Instance.currentLanguage);
