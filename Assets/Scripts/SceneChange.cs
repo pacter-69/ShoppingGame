@@ -12,6 +12,10 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
+    public void ChangeToEnding()
+    {
+        SceneManager.LoadScene("Ending");
+    }
 
     void OnChangeGameplay()
     {
@@ -27,5 +31,6 @@ public class SceneChange : MonoBehaviour
     {
         GameObject sceneManager = GameObject.Find("SceneManager");
         if (sceneManager != gameObject) Destroy(sceneManager);
+       HPControl.OnDeath += ChangeToEnding;
     }
 }

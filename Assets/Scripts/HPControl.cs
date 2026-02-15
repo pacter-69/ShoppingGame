@@ -6,10 +6,16 @@ public class HPControl : MonoBehaviour
 {
     int HP = 100;
     public static event Action<int> OnHPChange;
+    public static event Action OnDeath;
+
 
     void OnDamage()
     {
         HP--;
+        if (HP == 0)
+        {
+            OnDeath?.Invoke();
+        }
         OnHPChange?.Invoke(HP);
     }
 }
