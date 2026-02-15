@@ -29,6 +29,54 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Scene",
+            "id": "9b53d212-60d5-4147-b574-0deb5c9ec352",
+            "actions": [
+                {
+                    "name": "Close",
+                    "type": "Button",
+                    "id": "14df2441-23b0-4ed8-ac68-4624bcb8dfd7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeGameplay",
+                    "type": "Button",
+                    "id": "275f6d31-60c0-4a4f-9834-a3788d841a94",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e388844b-ac23-448e-b623-8125fd5e46e3",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Close",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "741b9f76-1311-491e-8486-76763fa175bd",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ChangeGameplay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
