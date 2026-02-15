@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.InputSystem.Controls;
 
 public class UpdateMoneyText : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class UpdateMoneyText : MonoBehaviour
     public void UpdateMoney(int amount)
     {
         money += amount;
+        money = Mathf.Clamp(money, 0, int.MaxValue);
         GetComponent<Text>().text = money.ToString();
     }
 }
