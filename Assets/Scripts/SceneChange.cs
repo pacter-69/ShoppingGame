@@ -6,6 +6,9 @@ public class SceneChange : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        if (GameObject.Find("SceneChange") != gameObject) { 
+            Destroy (GameObject.Find("SceneChange"));
+        }
     }
 
     public void ChangeToLevel()
