@@ -6,9 +6,6 @@ public class SceneChange : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-        if (GameObject.Find("SceneChange") != gameObject) { 
-            Destroy (GameObject.Find("SceneChange"));
-        }
     }
 
     public void ChangeToLevel()
@@ -24,5 +21,11 @@ public class SceneChange : MonoBehaviour
     void OnClose()
     {
         Application.Quit();
+    }
+
+    private void Update()
+    {
+        GameObject sceneManager = GameObject.Find("SceneManager");
+        if (sceneManager != gameObject) Destroy(sceneManager);
     }
 }
