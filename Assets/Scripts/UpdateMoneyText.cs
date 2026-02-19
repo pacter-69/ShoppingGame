@@ -1,7 +1,8 @@
 using TMPro;
-using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.InputSystem.Controls;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UpdateMoneyText : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class UpdateMoneyText : MonoBehaviour
     public void Start()
     {
         GetComponent<Text>().text = money.ToString();
+    }
+
+    void OnDamage()
+    {
+        UpdateMoney(100);
     }
 
     public void UpdateMoney(int amount)
