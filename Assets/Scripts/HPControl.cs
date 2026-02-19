@@ -12,8 +12,8 @@ public class HPControl : MonoBehaviour
 
     void OnDamage()
     {
-        HP=HP-10;
-        if (HP <= 0)
+        HP--;
+        if (HP == 0)
         {
             SceneManager.LoadScene("Ending");
         }
