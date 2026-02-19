@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,9 +6,11 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
     public ItemSlotUI SlotPrefab;
-    private GameObject selectedSlot;
+    public GameObject selectedSlot;
 
     List<GameObject> itemSlotList;
+
+    public event Action<GameObject> OnUsedItem;
 
     void Start()
     {
@@ -17,11 +20,17 @@ public class InventoryUI : MonoBehaviour
     private void OnEnable()
     {
         Inventory.OnInventoryChange += UpdateInventoryUI;
+
+        ItemSlotUI.OnClickedItemSlot += SelectCurrentItem;
+        ItemSlotUI.OnGrabbedItemSlot += UnselectCurrentItem;
     }
 
     private void OnDisable()
     {
         Inventory.OnInventoryChange -= UpdateInventoryUI;
+
+        ItemSlotUI.OnClickedItemSlot -= SelectCurrentItem;
+        ItemSlotUI.OnGrabbedItemSlot -= UnselectCurrentItem;
     }
 
     private void UpdateInventoryUI()
@@ -29,6 +38,7 @@ public class InventoryUI : MonoBehaviour
         // Regenerate full inventory on changes
         ClearInventoryUI();
         FillInventoryUI(Inventory);
+        UnselectCurrentItem();
     }
 
     private void ClearInventoryUI()
@@ -66,6 +76,28 @@ public class InventoryUI : MonoBehaviour
 
     public void UseItem(ItemBase item)
     {
+        OnUsedItem?.Invoke(selectedSlot);
         Inventory.RemoveItem(item);
+    }
+
+    public void SelectCurrentItem(GameObject selectItem)
+    {
+        if(Inventory.GetSlot(selectItem.GetComponent<ItemSlotUI>().GetItem()) != null)
+        // This is supposed to check if the item is in the current inventory, so that it could be possible to have one selected item per
+        // inventory, but it currently doesn't work.
+        {
+            if (selectedSlot != null) UnselectCurrentItem();
+            selectedSlot = selectItem;
+            selectItem.GetComponent<ItemSlotUI>().selectedAlert.SetActive(true);
+        }
+    }
+
+    public void UnselectCurrentItem()
+    {
+        if(selectedSlot)
+        {
+            selectedSlot.GetComponent<ItemSlotUI>().selectedAlert.SetActive(false);
+            selectedSlot = null;
+        }
     }
 }
