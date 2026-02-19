@@ -24,6 +24,11 @@ public class ScoreText : MonoBehaviour
 
     private void UpdateSlider(int HP)
     {
-        label.value = HP;
+        label.value.CompareTo(HP) ;
+        while (label.value.CompareTo(HP) == 1) { 
+            label.value = label.value--;
+            }
+        while (label.value.CompareTo(HP) == -1)
+            label.value = label.value++;
     }
 }
