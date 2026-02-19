@@ -5,6 +5,7 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
     public ItemSlotUI SlotPrefab;
+    private GameObject selectedSlot;
 
     List<GameObject> itemSlotList;
 
@@ -56,7 +57,7 @@ public class InventoryUI : MonoBehaviour
     private GameObject AddSlot(ItemSlot itemSlot)
     {
         // Add a new visual slot UI in inventory UI, using provided prefab
-        var element = GameObject.Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, transform);
+        var element = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, transform);
 
         element.Initialize(itemSlot, this);
 
