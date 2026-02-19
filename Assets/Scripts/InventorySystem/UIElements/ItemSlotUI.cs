@@ -1,21 +1,24 @@
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     // NOTE: Inventory UI slots support drag&drop,
     // implementing the Unity provided interfaces by events system
 
-    public Image Image;
+    public UnityEngine.UI.Image Image;
     public TextMeshProUGUI AmountText;
 
     private Canvas canvas;
     private Transform parent;
     private ItemBase item;
     private InventoryUI inventory;
+
+    public Action<GameObject> OnClickedItemSlot;
 
     public void Initialize(ItemSlot slot, InventoryUI inventory)
     {
@@ -74,5 +77,11 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         // And centering item position
         transform.localPosition = Vector3.zero;
+    }
+
+    private void OnMouseDown()
+    {
+        OnClickedItemSlot?.Invoke(gameObject);
+        Debug.Log("Item slot clickado: " + item.Name);
     }
 }
