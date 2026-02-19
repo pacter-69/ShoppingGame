@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 031205669677d784bbb947adf4bf92f2, type: 3}
-  m_Name: Bread
-  m_EditorClassIdentifier: Assembly-CSharp::ItemBread
+  m_Script: {fileID: 11500000, guid: 57a6399ef92c915479b413e3514924c1, type: 3}
+  m_Name: Meat
+  m_EditorClassIdentifier: Assembly-CSharp::ItemWildfireRoastedMeat
   Name: 
   ImageUI: {fileID: 0}
   IsStackable: 0
