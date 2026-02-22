@@ -12,12 +12,20 @@ public class HPControl : MonoBehaviour
 
     void OnDamage()
     {
-        HP=HP-10;
+        HP=HP-d;
         if (HP <= 0)
         {
             SceneManager.LoadScene("Ending");
         }
         OnHPChange?.Invoke(HP);
     }
-
+    void OnHealth(int h)
+    {
+        HP = HP +h;
+        if (HP > 100)
+        {
+            HP = 100;
+        }
+        OnHPChange?.Invoke(HP);
+    }
 }
