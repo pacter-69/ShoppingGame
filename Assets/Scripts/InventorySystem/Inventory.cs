@@ -53,7 +53,7 @@ public class Inventory : ScriptableObject
         Slots.Remove(slot);
     }
 
-    public ItemSlot GetSlot(ItemBase item)
+    private ItemSlot GetSlot(ItemBase item)
     {
         for (int i = 0; i < Slots.Count; i++)
         {

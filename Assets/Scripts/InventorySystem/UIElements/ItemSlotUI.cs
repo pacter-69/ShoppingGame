@@ -1,6 +1,5 @@
 using System;
 using TMPro;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -19,10 +18,7 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private ItemBase item;
     private InventoryUI inventory;
 
-    public GameObject selectedAlert;
-
-    public static event Action<GameObject> OnClickedItemSlot;
-    public static event Action OnGrabbedItemSlot;
+    public Action<GameObject> OnClickedItemSlot;
 
     public void Initialize(ItemSlot slot, InventoryUI inventory)
     {
@@ -49,9 +45,6 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
         // And set it as last child to be rendered on top of UI
         transform.SetAsLastSibling();
-
-        // Unselect item from inventory
-        OnGrabbedItemSlot?.Invoke();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -90,10 +83,5 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         OnClickedItemSlot?.Invoke(gameObject);
         Debug.Log("Item slot clickado: " + item.Name);
-    }
-
-    public ItemBase GetItem()
-    {
-        return item;
     }
 }
