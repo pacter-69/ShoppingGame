@@ -67,4 +67,9 @@ public class Inventory : ScriptableObject
     {
         return Slots[i];
     }
+
+    public bool HasItem(ItemSlot item)
+    {
+        return Slots.Contains(item);
+    }
 }

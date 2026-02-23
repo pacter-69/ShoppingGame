@@ -18,6 +18,7 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     private Transform parent;
     private ItemBase item;
     private InventoryUI inventory;
+    private ItemSlot slot;
 
     public GameObject selectedAlert;
 
@@ -33,6 +34,7 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         AmountText.enabled = (slot.Amount > 1);
 
         item = slot.Item;
+        this.slot = slot;
         this.inventory = inventory;
     }
 
@@ -96,4 +98,11 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         return item;
     }
+
+    public ItemSlot GetItemSlot()
+    {
+        return slot;
+    }
+
+
 }
