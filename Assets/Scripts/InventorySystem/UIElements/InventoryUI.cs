@@ -77,7 +77,13 @@ public class InventoryUI : MonoBehaviour
     public void UseItem(ItemBase item)
     {
         OnUsedItem?.Invoke(selectedSlot);
+        item.Use();
         Inventory.RemoveItem(item);
+    }
+
+    public void UseSelectedItem()
+    {
+        UseItem(selectedSlot.GetComponent<ItemSlotUI>().GetItem());
     }
 
     public void SelectCurrentItem(GameObject selectItem)
