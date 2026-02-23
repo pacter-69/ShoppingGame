@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 47896367}
   - component: {fileID: 47896366}
   m_Layer: 5
-  m_Name: TextTitle (1)
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 91250681}
   - component: {fileID: 91250680}
   m_Layer: 0
-  m_Name: New Piskel (3)_0 (1)
+  m_Name: Meat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -592,7 +592,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.039649326, g: 0.17383516, b: 0.9339623, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -645,8 +645,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -2510476293373519475, guid: 91f3fbf7a9e1d1c47afc8c9a154418db,
+    type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -674,7 +675,7 @@ GameObject:
   - component: {fileID: 1020768284}
   - component: {fileID: 1020768283}
   m_Layer: 0
-  m_Name: Pa melo
+  m_Name: Bread
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -843,7 +844,7 @@ GameObject:
   - component: {fileID: 1058970911}
   - component: {fileID: 1058970910}
   m_Layer: 5
-  m_Name: TextTitle
+  m_Name: TitleShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1084,7 +1085,7 @@ GameObject:
   - component: {fileID: 1624738965}
   - component: {fileID: 1624738964}
   m_Layer: 0
-  m_Name: New Piskel (2)_0 (1)
+  m_Name: HealthPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1176,7 +1177,7 @@ GameObject:
   - component: {fileID: 1646389062}
   - component: {fileID: 1646389061}
   m_Layer: 0
-  m_Name: New Piskel (3)_0
+  m_Name: Meat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1344,7 +1345,7 @@ GameObject:
   - component: {fileID: 1864372097}
   - component: {fileID: 1864372096}
   m_Layer: 0
-  m_Name: New Piskel (2)_0
+  m_Name: HealthPotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,7 +1437,7 @@ GameObject:
   - component: {fileID: 1963827548}
   - component: {fileID: 1963827547}
   m_Layer: 0
-  m_Name: GlassCanon_0
+  m_Name: GlassCanon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
