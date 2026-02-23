@@ -4,6 +4,7 @@ using UnityEngine;
 public class ItemBase : ScriptableObject
 {
     public string Name;
+    public string description;
     public Sprite ImageUI;
     public bool IsStackable;
     public int cost;
