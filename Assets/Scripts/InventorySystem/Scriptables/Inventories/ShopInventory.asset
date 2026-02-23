@@ -17,8 +17,6 @@ MonoBehaviour:
     Amount: 99
   - Item: {fileID: 11400000, guid: d6147051832479a469a4d2637fe2dde6, type: 2}
     Amount: 99
-  - Item: {fileID: 11400000, guid: d6147051832479a469a4d2637fe2dde6, type: 2}
-    Amount: 99
   - Item: {fileID: 11400000, guid: 55562f6b7ee548b4f922695ef554c0b2, type: 2}
     Amount: 99
   - Item: {fileID: 11400000, guid: 17acc8ea4c363b141ae6558f38382e79, type: 2}
