@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemHealthPotion
   Name: HP potion
   description: It isn't red
-  ImageUI: {fileID: 0}
+  ImageUI: {fileID: 3763752930381237044, guid: cc031b8f3f50b3043898d6114a50b466, type: 3}
   IsStackable: 1
   cost: 500
   healingPoints: 100

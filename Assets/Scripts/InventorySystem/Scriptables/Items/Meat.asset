@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemWildfireRoastedMeat
   Name: Meat
   description: Where is the bandage
-  ImageUI: {fileID: 0}
+  ImageUI: {fileID: -1603291472181913768, guid: 13f340b7906f3be4693486b9d3ff411f,
+    type: 3}
   IsStackable: 1
   cost: 250
   healingPoints: 50
