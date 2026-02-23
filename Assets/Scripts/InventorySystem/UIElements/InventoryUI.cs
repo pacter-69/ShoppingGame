@@ -8,6 +8,8 @@ public class InventoryUI : MonoBehaviour
     public ItemSlotUI SlotPrefab;
     public GameObject selectedSlot;
 
+    public IConsume consumer;
+
     List<GameObject> itemSlotList;
 
     public event Action<GameObject> OnUsedItem;
@@ -78,28 +80,39 @@ public class InventoryUI : MonoBehaviour
     {
         if (HasSelectedItemInInventory())
         {
-            OnUsedItem?.Invoke(selectedSlot);
-            item.Use();
-            UnselectCurrentItem();
-            Inventory.RemoveItem(item);
+            if(item is ConsumableItem)
+            {
+                UnselectCurrentItem();
+                (item as ConsumableItem).Use(consumer);
+                Inventory.RemoveItem(item);
+                OnUsedItem?.Invoke(selectedSlot);
+
+            }
+            else
+            {
+                Debug.Log("¡Este item no es consumible!");
+            }
+            
         }
     }
 
     public void UseSelectedItem()
     {
-        UseItem(selectedSlot.GetComponent<ItemSlotUI>().GetItem());
+        if (selectedSlot)
+        {
+            UseItem(selectedSlot.GetComponent<ItemSlotUI>().GetItem());
+        }
+
     }
 
     public void SelectCurrentItem(GameObject selectItem)
     {
-        if (HasSelectedItemInInventory())
-        // This is supposed to check if the item is in the current inventory, so that it could be possible to have one selected item per
-        // inventory, but it currently doesn't work.
-        {
+        //if (HasSelectedItemInInventory())
+        //{
             if (selectedSlot != null) UnselectCurrentItem();
             selectedSlot = selectItem;
             selectItem.GetComponent<ItemSlotUI>().selectedAlert.SetActive(true);
-        }
+        //}
     }
 
     public void UnselectCurrentItem()

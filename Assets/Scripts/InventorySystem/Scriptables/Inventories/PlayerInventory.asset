@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cb96f92f5c0094c95c81efe1608681, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
-  Slots: []
+  Slots:
+  - Item: {fileID: 11400000, guid: 300a91a3f7bd59e449cf64edec654dca, type: 2}
+    Amount: 70

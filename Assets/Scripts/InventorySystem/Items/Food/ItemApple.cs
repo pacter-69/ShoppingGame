@@ -8,6 +8,6 @@ public class ItemApple : ConsumableItem
 
     public override void Use(IConsume consumer)
     {
-        Debug.Log("Consumable item consumed!!!");
+        Debug.Log("Apple consumed!!!");
     }
 }

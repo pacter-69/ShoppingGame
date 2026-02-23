@@ -3,8 +3,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Sword", menuName = "Inventory System/Items/Weapons/Sword")]
 public class Sword : Weapon
 {
-    public override void Use()
+    public override void SharpenWeapon()
     {
-        Debug.Log("Consumable item consumed!!!");
+        Debug.Log("Weapon sharpened!!!");
     }
 }

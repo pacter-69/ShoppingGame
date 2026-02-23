@@ -638,6 +638,7 @@ GameObject:
   - component: {fileID: 6542828844082277896}
   - component: {fileID: 5008794250961948302}
   - component: {fileID: 6704235878987504325}
+  - component: {fileID: 6638417964739321219}
   m_Layer: 5
   m_Name: ButtonSell
   m_TagString: Untagged
@@ -767,6 +768,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &6638417964739321219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498578732531979701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9101174ced9d7a41acfd888c1331a00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerInventory: {fileID: 0}
+  shopInventory: {fileID: 0}
 --- !u!1 &2613184303954935122
 GameObject:
   m_ObjectHideFlags: 0
