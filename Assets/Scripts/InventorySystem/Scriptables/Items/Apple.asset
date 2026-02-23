@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Apple
   m_EditorClassIdentifier: Assembly-CSharp::ItemApple
   Name: Apple
-  ImageUI: {fileID: 21300000, guid: a27bfbd93698612468ecbe60d9860480, type: 3}
+  description: I  have a pen...
+  ImageUI: {fileID: -2510476293373519475, guid: 02cdd39243ea97f4cb892d559bc94270,
+    type: 3}
   IsStackable: 1
   cost: 10
-  healingPoints: 50
+  healingPoints: 5

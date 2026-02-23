@@ -15,3 +15,7 @@ MonoBehaviour:
   Slots:
   - Item: {fileID: 11400000, guid: 300a91a3f7bd59e449cf64edec654dca, type: 2}
     Amount: 99
+  - Item: {fileID: 11400000, guid: d6147051832479a469a4d2637fe2dde6, type: 2}
+    Amount: 99
+  - Item: {fileID: 11400000, guid: d6147051832479a469a4d2637fe2dde6, type: 2}
+    Amount: 99

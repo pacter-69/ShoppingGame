@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 031205669677d784bbb947adf4bf92f2, type: 3}
   m_Name: Bread
   m_EditorClassIdentifier: Assembly-CSharp::ItemBread
-  Name: 
-  ImageUI: {fileID: 0}
-  IsStackable: 0
-  cost: 0
-  healingPoints: 0
+  Name: Melon bread
+  description: A Melo likes this
+  ImageUI: {fileID: -6888756438569675735, guid: 954e0340b43e4b94e80aa69313818292,
+    type: 3}
+  IsStackable: 1
+  cost: 20
+  healingPoints: 10

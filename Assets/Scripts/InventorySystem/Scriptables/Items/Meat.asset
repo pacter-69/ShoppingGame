@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a6399ef92c915479b413e3514924c1, type: 3}
   m_Name: Meat
   m_EditorClassIdentifier: Assembly-CSharp::ItemWildfireRoastedMeat
-  Name: 
+  Name: Meat
+  description: Where is the bandage
   ImageUI: {fileID: 0}
-  IsStackable: 0
-  cost: 0
-  healingPoints: 0
+  IsStackable: 1
+  cost: 250
+  healingPoints: 50
