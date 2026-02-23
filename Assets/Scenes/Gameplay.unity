@@ -492,7 +492,7 @@ RectTransform:
   m_GameObject: {fileID: 1129235635}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -9720}
-  m_LocalScale: {x: 108, y: 108, z: 108}
+  m_LocalScale: {x: 2.0445955, y: 2.0445955, z: 2.0445955}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1331371095}
@@ -501,7 +501,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 17280, y: 15120}
+  m_AnchoredPosition: {x: -717, y: -427}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129235637
@@ -932,11 +932,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5008794250961948302, guid: fbfae6150a4127347aabc5bbf82ad1a4,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_IntArgument
-      value: -15
-      objectReference: {fileID: 0}
     - target: {fileID: 5660196156087252140, guid: fbfae6150a4127347aabc5bbf82ad1a4,
         type: 3}
       propertyPath: m_Name
@@ -947,7 +942,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 850353572188612487, guid: fbfae6150a4127347aabc5bbf82ad1a4,
         type: 3}
-      insertIndex: 6
+      insertIndex: 1
       addedObject: {fileID: 1129235636}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbfae6150a4127347aabc5bbf82ad1a4, type: 3}
