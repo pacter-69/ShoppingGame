@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 1020768284}
   - component: {fileID: 1020768283}
   m_Layer: 0
-  m_Name: New Piskel (1)_0
+  m_Name: Pa melo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1159,7 +1159,7 @@ GameObject:
   - component: {fileID: 2091661204}
   - component: {fileID: 2091661203}
   m_Layer: 0
-  m_Name: New Piskel_0
+  m_Name: Poma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
