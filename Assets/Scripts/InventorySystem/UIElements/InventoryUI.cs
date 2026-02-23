@@ -76,9 +76,13 @@ public class InventoryUI : MonoBehaviour
 
     public void UseItem(ItemBase item)
     {
-        OnUsedItem?.Invoke(selectedSlot);
-        item.Use();
-        Inventory.RemoveItem(item);
+        if (HasSelectedItemInInventory())
+        {
+            OnUsedItem?.Invoke(selectedSlot);
+            item.Use();
+            UnselectCurrentItem();
+            Inventory.RemoveItem(item);
+        }
     }
 
     public void UseSelectedItem()
@@ -88,7 +92,7 @@ public class InventoryUI : MonoBehaviour
 
     public void SelectCurrentItem(GameObject selectItem)
     {
-        if(Inventory.GetSlot(selectItem.GetComponent<ItemSlotUI>().GetItem()) != null)
+        if (HasSelectedItemInInventory())
         // This is supposed to check if the item is in the current inventory, so that it could be possible to have one selected item per
         // inventory, but it currently doesn't work.
         {
@@ -105,5 +109,11 @@ public class InventoryUI : MonoBehaviour
             selectedSlot.GetComponent<ItemSlotUI>().selectedAlert.SetActive(false);
             selectedSlot = null;
         }
+    }
+
+    public bool HasSelectedItemInInventory()
+    {
+        if (selectedSlot == null) return true;
+        else return Inventory.HasItem(selectedSlot.GetComponent<ItemSlotUI>().GetItemSlot());
     }
 }
