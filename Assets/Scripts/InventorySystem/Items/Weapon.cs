@@ -2,9 +2,15 @@ using UnityEngine;
 
 public abstract class Weapon : ItemBase
 {
-    public int damage;
+    protected int damage;
 
-    public int durability;
+    private int durability;
+
+    public void AddToDurability(int value)
+    {
+        durability += value;
+        if(durability < 0) durability = 0;
+    }
 
     public abstract void SharpenWeapon();
 }

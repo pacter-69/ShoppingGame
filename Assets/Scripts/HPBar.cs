@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(Slider))]
 
-public class HPBar : MonoBehaviour, IConsume
+public class HPBar : MonoBehaviour
 {
     private Slider label;
 
@@ -20,11 +20,6 @@ public class HPBar : MonoBehaviour, IConsume
     private void OnEnable()
     {
         HPControl.OnHPChange += UpdateSlider;
-    }
-
-    public void Consume(int value)
-    {
-        // Trucar a algun métode per updatejar la vida, potser s'hauria de canviar a HP Control
     }
 
     private void UpdateSlider(int HP)

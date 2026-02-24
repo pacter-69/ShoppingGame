@@ -1,14 +1,12 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.SocialPlatforms.Impl;
 
-public class HPControl : MonoBehaviour
+public class HPControl : MonoBehaviour, IConsume
 {
     int HP = 100;
     public static event Action<int> OnHPChange;
     public static event Action<bool> OnDeath;
-
 
     void OnDamage()
     {
@@ -21,11 +19,17 @@ public class HPControl : MonoBehaviour
     }
     void OnHealth(int h)
     {
-        HP = HP +h;
+        HP = HP + h;
+
         if (HP > 100)
         {
             HP = 100;
         }
         OnHPChange?.Invoke(HP);
+    }
+
+    void IConsume.Consume(int value)
+    {
+        OnHealth(value);
     }
 }

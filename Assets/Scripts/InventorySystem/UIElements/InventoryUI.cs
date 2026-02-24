@@ -60,7 +60,6 @@ public class InventoryUI : MonoBehaviour
 
     private void FillInventoryUI(Inventory inventory)
     {
-        // Lazy initialization for objects list
         if (itemSlotList == null) itemSlotList = new List<GameObject>();
 
         if (itemSlotList.Count > 0) ClearInventoryUI();
@@ -73,7 +72,6 @@ public class InventoryUI : MonoBehaviour
 
     private GameObject AddSlot(ItemSlot itemSlot)
     {
-        // Add a new visual slot UI in inventory UI, using provided prefab
         var element = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, transform);
 
         element.Initialize(itemSlot, this);
@@ -85,10 +83,10 @@ public class InventoryUI : MonoBehaviour
     {
         if (HasSelectedItemInInventory() && isPlayer)
         {
-            if(item is ConsumableItem)
+            if (item is ConsumableItem)
             {
                 UnselectCurrentItem();
-                (item as ConsumableItem).Use(consumer.GetComponent<HPBar>() as IConsume);
+                (item as ConsumableItem).Use(consumer.GetComponent<IConsume>());
                 Inventory.RemoveItem(item);
                 OnUsedItem?.Invoke(selectedSlot);
             }
@@ -96,7 +94,6 @@ public class InventoryUI : MonoBehaviour
             {
                 Debug.Log("¡Este item no es consumible!");
             }
-            
         }
     }
 
@@ -106,29 +103,26 @@ public class InventoryUI : MonoBehaviour
         {
             UseItem(selectedSlot.GetComponent<ItemSlotUI>().GetItem());
         }
+    }
+
+    private void SelectCurrentItem(GameObject selectItem)
+    {
+        if (selectedSlot != null) UnselectCurrentItem();
+        selectedSlot = selectItem;
+        selectItem.GetComponent<ItemSlotUI>().selectedAlert.SetActive(true);
 
     }
 
-    public void SelectCurrentItem(GameObject selectItem)
+    private void UnselectCurrentItem()
     {
-        //if (HasSelectedItemInInventory())
-        //{
-            if (selectedSlot != null) UnselectCurrentItem();
-            selectedSlot = selectItem;
-            selectItem.GetComponent<ItemSlotUI>().selectedAlert.SetActive(true);
-        //}
-    }
-
-    public void UnselectCurrentItem()
-    {
-        if(selectedSlot)
+        if (selectedSlot)
         {
             selectedSlot.GetComponent<ItemSlotUI>().selectedAlert.SetActive(false);
             selectedSlot = null;
         }
     }
 
-    public bool HasSelectedItemInInventory()
+    private bool HasSelectedItemInInventory()
     {
         if (selectedSlot == null) return true;
         else return Inventory.HasItem(selectedSlot.GetComponent<ItemSlotUI>().GetItemSlot());
@@ -143,7 +137,7 @@ public class InventoryUI : MonoBehaviour
     {
         int itemCost = selectedSlot.GetComponent<ItemSlotUI>().GetItem().cost;
 
-        if (otherInventory.CanBuyItem(itemCost) && selectedSlot.GetComponent<ItemSlotUI>().GetInventoryUI() == this) 
+        if (otherInventory.CanBuyItem(itemCost) && selectedSlot.GetComponent<ItemSlotUI>().GetInventoryUI() == this)
         {
             ItemSlotUI selectedSlotUI = selectedSlot.GetComponent<ItemSlotUI>();
 
@@ -161,7 +155,29 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    public bool CanBuyItem(int itemValue)
+    public void SellItemToOtherInventory(InventoryUI otherInventory, GameObject itemToSell)
+    {
+        int itemCost = itemToSell.GetComponent<ItemSlotUI>().GetItem().cost;
+
+        if (otherInventory.CanBuyItem(itemCost) && itemToSell.GetComponent<ItemSlotUI>().GetInventoryUI() == this)
+        {
+            ItemSlotUI itemToSellUI = itemToSell.GetComponent<ItemSlotUI>();
+
+            Inventory.RemoveItem(itemToSellUI.GetItem());
+            otherInventory.Inventory.AddItem(itemToSellUI.GetItem());
+
+            AddMoney(itemCost);
+            otherInventory.AddMoney(-itemCost);
+
+            Debug.Log("¡Transition made!");
+        }
+        else
+        {
+            Debug.Log("Some party doesn't have enough resources for this transaction...");
+        }
+    }
+
+    private bool CanBuyItem(int itemValue)
     {
         return MoneyTextObject.GetComponent<UpdateMoneyText>().GetMoney() - itemValue >= 0;
     }

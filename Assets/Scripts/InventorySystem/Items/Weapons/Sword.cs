@@ -5,6 +5,8 @@ public class Sword : Weapon
 {
     public override void SharpenWeapon()
     {
+        damage += 10;
+        AddToDurability(-5);
         Debug.Log("Weapon sharpened!!!");
     }
 }
