@@ -65,38 +65,6 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Find scene objects colliding with mouse point on end dragging
-        //RaycastHit2D hitData = Physics2D.GetRayIntersection(
-        //    Camera.main.ScreenPointToRay(Input.mousePosition), Mathf.Infinity, 1 << 3);
-
-        /*RaycastHit2D hitData = Physics2D.GetRayIntersection(
-    Camera.main.ScreenPointToRay(Input.mousePosition),
-    Mathf.Infinity);
-
-        if (hitData)
-        {
-            Debug.Log("Drop over object: " + hitData.collider.gameObject.name);
-
-            var consumer = hitData.collider.gameObject.GetComponent<IConsume>();
-            var buyer = hitData.collider.gameObject;
-
-            if ((consumer != null) && (item is ConsumableItem))
-            {
-                (item as ConsumableItem).Use(consumer);
-                inventory.UseItem(item);
-            }
-            else if((buyer != null) && (buyer.GetComponent<IBuy>() != null) && (buyer.GetComponent<InventoryUI>() != inventory))
-            {
-                // Changing parent back to slot
-                transform.SetParent(parent.transform);
-
-                // And centering item position
-                transform.localPosition = Vector3.zero;
-
-                inventory.SellItemToOtherInventory(buyer.GetComponent<InventoryUI>(), gameObject);
-            }
-        }*/
-
         // Changing parent back to slot
         transform.SetParent(parent.transform);
 
