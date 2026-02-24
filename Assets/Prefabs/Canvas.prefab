@@ -422,6 +422,7 @@ MonoBehaviour:
   SlotPrefab: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
     type: 3}
   selectedSlot: {fileID: 0}
+  MoneyTextObject: {fileID: 4103553569294219503}
 --- !u!1 &2445715862569433565
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,6 +640,7 @@ GameObject:
   - component: {fileID: 5008794250961948302}
   - component: {fileID: 6704235878987504325}
   - component: {fileID: 6638417964739321219}
+  - component: {fileID: 7082372054173531620}
   m_Layer: 5
   m_Name: ButtonSell
   m_TagString: Untagged
@@ -780,8 +782,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9101174ced9d7a41acfd888c1331a00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  playerInventory: {fileID: 0}
-  shopInventory: {fileID: 0}
+  playerInventory: {fileID: 7732474719375069718}
+  shopInventory: {fileID: 9216932684259843287}
+--- !u!61 &7082372054173531620
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2498578732531979701}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: -0.00002670288}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 157.09525, y: 27.81395}
+  m_EdgeRadius: 0
 --- !u!1 &2613184303954935122
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1025,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f218d88f43337c43a2de8a215b7a438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  money: 200
 --- !u!114 &2197237482725143821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,7 +1600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f218d88f43337c43a2de8a215b7a438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UpdateMoneyText
-  money: 500
 --- !u!1 &7348951919989599548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,6 +1869,7 @@ MonoBehaviour:
   SlotPrefab: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
     type: 3}
   selectedSlot: {fileID: 0}
+  MoneyTextObject: {fileID: 7192848031579220586}
 --- !u!1 &7802841696878878811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1836,6 +1883,7 @@ GameObject:
   - component: {fileID: 2482234856490892585}
   - component: {fileID: 4029781930568987590}
   - component: {fileID: 1892703978628307049}
+  - component: {fileID: 1238294394765545960}
   m_Layer: 5
   m_Name: ButtonBuy
   m_TagString: Untagged
@@ -1965,6 +2013,20 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &1238294394765545960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7802841696878878811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6f7c285821b174c9e4955947c054b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerInventory: {fileID: 7732474719375069718}
+  shopInventory: {fileID: 9216932684259843287}
 --- !u!1 &7946027913891657989
 GameObject:
   m_ObjectHideFlags: 0

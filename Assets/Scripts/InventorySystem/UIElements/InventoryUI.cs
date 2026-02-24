@@ -6,7 +6,11 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
     public ItemSlotUI SlotPrefab;
-    public GameObject selectedSlot;
+
+    [SerializeField]
+    private GameObject selectedSlot;
+
+    public GameObject MoneyTextObject;
 
     public IConsume consumer;
 
@@ -86,7 +90,6 @@ public class InventoryUI : MonoBehaviour
                 (item as ConsumableItem).Use(consumer);
                 Inventory.RemoveItem(item);
                 OnUsedItem?.Invoke(selectedSlot);
-
             }
             else
             {
@@ -128,5 +131,37 @@ public class InventoryUI : MonoBehaviour
     {
         if (selectedSlot == null) return true;
         else return Inventory.HasItem(selectedSlot.GetComponent<ItemSlotUI>().GetItemSlot());
+    }
+
+    private void AddMoney(int value)
+    {
+        MoneyTextObject.GetComponent<UpdateMoneyText>().UpdateMoney(value);
+    }
+
+    public void SellItemToOtherInventory(InventoryUI otherInventory)
+    {
+        int itemCost = selectedSlot.GetComponent<ItemSlotUI>().GetItem().cost;
+
+        if (otherInventory.CanBuyItem(itemCost) && selectedSlot.GetComponent<ItemSlotUI>().GetInventoryUI() == this) 
+        {
+            ItemSlotUI selectedSlotUI = selectedSlot.GetComponent<ItemSlotUI>();
+
+            Inventory.RemoveItem(selectedSlotUI.GetItem());
+            otherInventory.Inventory.AddItem(selectedSlotUI.GetItem());
+
+            AddMoney(itemCost);
+            otherInventory.AddMoney(-itemCost);
+
+            Debug.Log("¡Transition made!");
+        }
+        else
+        {
+            Debug.Log("Some party doesn't have enough resources for this transaction...");
+        }
+    }
+
+    public bool CanBuyItem(int itemValue)
+    {
+        return MoneyTextObject.GetComponent<UpdateMoneyText>().GetMoney() - itemValue >= 0;
     }
 }

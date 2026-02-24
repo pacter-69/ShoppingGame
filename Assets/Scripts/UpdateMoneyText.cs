@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class UpdateMoneyText : MonoBehaviour
 {
-    public int money;
+    private int money;
 
     public void Start()
     {
+        money = 500;
         GetComponent<Text>().text = money.ToString();
     }
 
@@ -23,5 +24,10 @@ public class UpdateMoneyText : MonoBehaviour
         money += amount;
         money = Mathf.Clamp(money, 0, int.MaxValue);
         GetComponent<Text>().text = money.ToString();
+    }
+
+    public int GetMoney()
+    {
+        return money;
     }
 }

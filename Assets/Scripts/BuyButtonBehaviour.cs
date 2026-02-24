@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SellButtonBehaviour : MonoBehaviour, IMouseCaptureEvent
+public class BuyButtonBehaviour : MonoBehaviour, IMouseCaptureEvent
 {
     public InventoryUI playerInventory, shopInventory;
 
@@ -12,6 +12,6 @@ public class SellButtonBehaviour : MonoBehaviour, IMouseCaptureEvent
 
     public void SellItemToInventory()
     {
-        playerInventory.SellItemToOtherInventory(shopInventory);
+        shopInventory.SellItemToOtherInventory(playerInventory);
     }
 }

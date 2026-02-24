@@ -104,5 +104,8 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
         return slot;
     }
 
-
+    public InventoryUI GetInventoryUI()
+    {
+        return inventory;
+    }
 }
