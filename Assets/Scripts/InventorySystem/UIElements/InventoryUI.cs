@@ -6,13 +6,14 @@ public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
     public ItemSlotUI SlotPrefab;
+    public bool isPlayer;
 
     [SerializeField]
     private GameObject selectedSlot;
 
     public GameObject MoneyTextObject;
 
-    public IConsume consumer;
+    public GameObject consumer;
 
     List<GameObject> itemSlotList;
 
@@ -82,12 +83,12 @@ public class InventoryUI : MonoBehaviour
 
     public void UseItem(ItemBase item)
     {
-        if (HasSelectedItemInInventory())
+        if (HasSelectedItemInInventory() && isPlayer)
         {
             if(item is ConsumableItem)
             {
                 UnselectCurrentItem();
-                (item as ConsumableItem).Use(consumer);
+                (item as ConsumableItem).Use(consumer.GetComponent<HPBar>() as IConsume);
                 Inventory.RemoveItem(item);
                 OnUsedItem?.Invoke(selectedSlot);
             }

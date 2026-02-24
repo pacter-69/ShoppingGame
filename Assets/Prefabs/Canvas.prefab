@@ -421,8 +421,10 @@ MonoBehaviour:
   Inventory: {fileID: 11400000, guid: a7679a6915729514c9c97b55413c659c, type: 2}
   SlotPrefab: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
     type: 3}
+  isPlayer: 1
   selectedSlot: {fileID: 0}
   MoneyTextObject: {fileID: 4103553569294219503}
+  consumer: {fileID: 6010907247347707148}
 --- !u!1 &2445715862569433565
 GameObject:
   m_ObjectHideFlags: 0
@@ -1868,8 +1870,10 @@ MonoBehaviour:
   Inventory: {fileID: 11400000, guid: c5d592a632ce9904ab466183517e8600, type: 2}
   SlotPrefab: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
     type: 3}
+  isPlayer: 0
   selectedSlot: {fileID: 0}
   MoneyTextObject: {fileID: 7192848031579220586}
+  consumer: {fileID: 0}
 --- !u!1 &7802841696878878811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,6 +1888,7 @@ GameObject:
   - component: {fileID: 4029781930568987590}
   - component: {fileID: 1892703978628307049}
   - component: {fileID: 1238294394765545960}
+  - component: {fileID: 5769849989084383444}
   m_Layer: 5
   m_Name: ButtonBuy
   m_TagString: Untagged
@@ -2027,6 +2032,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerInventory: {fileID: 7732474719375069718}
   shopInventory: {fileID: 9216932684259843287}
+--- !u!61 &5769849989084383444
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7802841696878878811}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.09953308, y: -0.0000009536743}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 156.78043, y: 29.582197}
+  m_EdgeRadius: 0
 --- !u!1 &7946027913891657989
 GameObject:
   m_ObjectHideFlags: 0
