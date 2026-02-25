@@ -16,5 +16,9 @@ public abstract class Weapon : ItemBase
     }
 
     public abstract void SharpenWeapon();
+
+    public int GetDurability(){
+        return durability;
+    }
 }
 
