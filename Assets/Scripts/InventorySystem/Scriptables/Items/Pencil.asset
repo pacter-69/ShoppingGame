@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96039d3130db6714a8f5b64c901d9277, type: 3}
+  m_Name: Pencil
+  m_EditorClassIdentifier: Assembly-CSharp::Sword
+  Name: Pencil
+  description: It wins the sword
+  ImageUI: {fileID: 5806247343882902020, guid: 62a321e52e61bc84499ba3fa888346ec, type: 3}
+  IsStackable: 0
+  cost: 500
+  damage: 0
+  durability: 1000
