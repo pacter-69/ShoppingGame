@@ -10,4 +10,5 @@ public class ItemBase : ScriptableObject
     public int cost;
     public string nameTextKey;
     public string descriptionTextKey;
+    public string costTextKey = "ITEM_COST";
 }

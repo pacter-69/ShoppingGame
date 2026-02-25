@@ -24,7 +24,7 @@ public class LocalizeTextProNameAndCost : MonoBehaviour
         {
             ItemBase selectedItem = selectedSlot.GetItem();
             nameKey = selectedItem.nameTextKey;
-            costKey = selectedItem.
+            costKey = selectedItem.costTextKey;
 
             textValue.text = GameplayLocalizer.GetText(nameKey) + $": {selectedItem.cost} " + GameplayLocalizer.GetText(costKey);
         }
