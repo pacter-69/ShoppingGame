@@ -18,4 +18,8 @@ MonoBehaviour:
     type: 3}
   IsStackable: 1
   cost: 10
+  nameTextKey: APPLE_NAME
+  descriptionTextKey: APPLE_DESC
+  costTextKey: ITEM_COST
   healingPoints: 5
+  healingPointsTextKey: CONSUMABLE_HP

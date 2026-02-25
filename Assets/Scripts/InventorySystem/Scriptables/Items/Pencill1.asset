@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96039d3130db6714a8f5b64c901d9277, type: 3}
-  m_Name: Pencil
+  m_Name: Pencill1
   m_EditorClassIdentifier: Assembly-CSharp::Sword
-  Name: Pencil
-  description: It wins the sword
-  ImageUI: {fileID: 5806247343882902020, guid: 62a321e52e61bc84499ba3fa888346ec, type: 3}
+  Name: 
+  description: 
+  ImageUI: {fileID: 0}
   IsStackable: 0
-  cost: 500
+  cost: 0
+  nameTextKey: PENCIL_NAME
+  descriptionTextKey: PENCIL_DESC
+  costTextKey: ITEM_COST
   damage: 0
-  durability: 1000
+  damageTextKey: WEAPON_DAMAGE
+  durability: 0
+  durabilityTextKey: WEAPON_DURABILITY

@@ -17,4 +17,8 @@ MonoBehaviour:
   ImageUI: {fileID: 3763752930381237044, guid: cc031b8f3f50b3043898d6114a50b466, type: 3}
   IsStackable: 1
   cost: 500
+  nameTextKey: POTION_NAME
+  descriptionTextKey: POTION_DESC
+  costTextKey: ITEM_COST
   healingPoints: 100
+  healingPointsTextKey: CONSUMABLE_HP
