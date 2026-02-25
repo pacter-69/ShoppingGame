@@ -17,5 +17,10 @@ MonoBehaviour:
   ImageUI: {fileID: 5806247343882902020, guid: 62a321e52e61bc84499ba3fa888346ec, type: 3}
   IsStackable: 0
   cost: 500
+  nameTextKey: 
+  descriptionTextKey: 
+  costTextKey: ITEM_COST
   damage: 0
+  damageTextKey: WEAPON_DAMAGE
   durability: 1000
+  durabilityTextKey: WEAPON_DURABILITY
