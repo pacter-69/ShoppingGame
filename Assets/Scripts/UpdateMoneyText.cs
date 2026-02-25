@@ -10,7 +10,7 @@ public class UpdateMoneyText : MonoBehaviour
 
     public void Start()
     {
-        money = 500;
+        money = 1500;
         GetComponent<Text>().text = money.ToString();
     }
 

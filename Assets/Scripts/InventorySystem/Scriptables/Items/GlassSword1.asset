@@ -20,7 +20,7 @@ MonoBehaviour:
   nameTextKey: GSWORD_NAME
   descriptionTextKey: GSWORD_DESC
   costTextKey: ITEM_COST
-  damage: 1316134911
+  damage: 3141531
   damageTextKey: WEAPON_DAMAGE
-  durability: 1
+  durability: 0
   durabilityTextKey: WEAPON_DURABILITY
