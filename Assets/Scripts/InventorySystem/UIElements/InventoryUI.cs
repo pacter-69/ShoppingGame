@@ -90,9 +90,20 @@ public class InventoryUI : MonoBehaviour
                 Inventory.RemoveItem(item);
                 OnUsedItem?.Invoke(selectedSlot);
             }
+            else if (item is Weapon)
+            {
+                UnselectCurrentItem();
+                (item as Weapon).SharpenWeapon();
+                Debug.Log ((item as Weapon).GetDurability());
+                if ((item as Weapon).GetDurability()<=0){
+                    Inventory.RemoveItem(item);
+                    
+                    }
+                OnUsedItem?.Invoke(selectedSlot);
+            }
             else
             {
-                Debug.Log("¡Este item no es consumible!");
+                Debug.Log("ï¿½Este item no es consumible!");
             }
         }
     }
@@ -147,7 +158,7 @@ public class InventoryUI : MonoBehaviour
             AddMoney(itemCost);
             otherInventory.AddMoney(-itemCost);
 
-            Debug.Log("¡Transition made!");
+            Debug.Log("ï¿½Transition made!");
         }
         else
         {
@@ -169,7 +180,7 @@ public class InventoryUI : MonoBehaviour
             AddMoney(itemCost);
             otherInventory.AddMoney(-itemCost);
 
-            Debug.Log("¡Transition made!");
+            Debug.Log("ï¿½Transition made!");
         }
         else
         {
