@@ -2,3 +2,12 @@ Key;English;Catalan;Spanish
 GAMEPLAY_MENU_BUY;Buy;Comprar;Comprar
 GAMEPLAY_MENU_SELL;Sell;Vendre;Vender
 GAMEPLAY_MENU_USE;Use;Utilitzar;Usar
+ITEM_COST;coins;monedes;monedas
+APPLE_NAME;Apple;Poma;Manzana
+APPLE_DESC;A tasty and classic red apple!;Una deliciosa i classica poma vermella!;Una deliciosa y clasica manzana roja!
+GSWORD_NAME;Glass sword; Espasa de vidre; Espada de cristal;
+GSWORD_DESC;You sense a vague magical force emmanating from this weapon...;Sents una vaga aura magica emanant d'aquest arma...;Sientes una vaga aura magica emanando de este arma...
+POTION_NAME;Potion;Pocio;Pocion
+POTION_DESC;It's not red. Maybe you shouldn't drink it.;No es vermella. Potser no te l'hauries de beure.;No es roja. Alomejor no te la tendrias que beber;
+MEAT_NAME;Meat;Carn;Carne
+MEAT_DESC;It's red and square-like. You feel like you've seen this before; Es vermella i quadrada. Fa pinta de que has vist aixo en un altre lloc;Es roja y cuadrada

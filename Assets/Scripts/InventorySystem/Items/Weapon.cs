@@ -11,6 +11,7 @@ public abstract class Weapon : ItemBase
     public void AddToDurability(int value)
     {
         durability += value;
+
         if(durability < 0) durability = 0;
     }
 
