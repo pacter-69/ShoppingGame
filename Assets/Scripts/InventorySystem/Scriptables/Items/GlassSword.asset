@@ -16,6 +16,6 @@ MonoBehaviour:
   description: Just in case
   ImageUI: {fileID: -406505386535922096, guid: 1ade9f5a27271954b9a22be5256d99f9, type: 3}
   IsStackable: 0
-  cost: 999
-  damage: 9999999999999
+  cost: 999999
+  damage: 999999
   durability: 1

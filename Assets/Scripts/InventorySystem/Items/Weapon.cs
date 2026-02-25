@@ -2,9 +2,9 @@ using UnityEngine;
 
 public abstract class Weapon : ItemBase
 {
-    public long damage;
+    protected int damage;
 
-    public int durability;
+    private int durability;
 
     public void AddToDurability(int value)
     {
