@@ -7,14 +7,13 @@ public class LocalizeTextProNameAndCost : MonoBehaviour
     public InventoryUI playerInventory;
     private TextMeshPro textValue;
 
-    private string nameKey;
+    private string nameKey, costKey;
 
     private ItemSlotUI selectedSlot;
 
     void Start()
     {
-        //textValue = GetComponent<TextMeshPro>();
-        //textValue.text = GameplayLocalizer.GetText(TextKey);
+        textValue = GetComponent<TextMeshPro>();
     }
 
     private void Update()
@@ -25,8 +24,9 @@ public class LocalizeTextProNameAndCost : MonoBehaviour
         {
             ItemBase selectedItem = selectedSlot.GetItem();
             nameKey = selectedItem.nameTextKey;
+            costKey = selectedItem.
 
-            textValue.text = GameplayLocalizer.GetText(nameKey);
+            textValue.text = GameplayLocalizer.GetText(nameKey) + $": {selectedItem.cost} " + GameplayLocalizer.GetText(costKey);
         }
     }
 }
