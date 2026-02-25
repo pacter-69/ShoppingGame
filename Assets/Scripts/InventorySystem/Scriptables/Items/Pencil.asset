@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96039d3130db6714a8f5b64c901d9277, type: 3}
-  m_Name: GlassSword
+  m_Name: Pencil
   m_EditorClassIdentifier: Assembly-CSharp::Sword
-  Name: Glass Sword
-  description: Just in case
-  ImageUI: {fileID: -406505386535922096, guid: 1ade9f5a27271954b9a22be5256d99f9, type: 3}
+  Name: Pencil
+  description: It wins the sword
+  ImageUI: {fileID: 5806247343882902020, guid: 62a321e52e61bc84499ba3fa888346ec, type: 3}
   IsStackable: 0
-  cost: 999
-  damage: 9999999999999
-  durability: 1
+  cost: 500
+  damage: 0
+  durability: 1000

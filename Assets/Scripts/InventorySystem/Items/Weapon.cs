@@ -3,8 +3,10 @@ using UnityEngine;
 public abstract class Weapon : ItemBase
 {
     public int damage;
+    public string damageTextKey = "WEAPON_DAMAGE";
 
     public int durability;
+    public string durabilityTextKey = "WEAPON_DURABILITY";
 
     public void AddToDurability(int value)
     {
