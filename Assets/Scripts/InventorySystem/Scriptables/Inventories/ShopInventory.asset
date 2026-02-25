@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Inventory
   Slots:
   - Item: {fileID: 11400000, guid: 300a91a3f7bd59e449cf64edec654dca, type: 2}
-    Amount: 60
+    Amount: 62
   - Item: {fileID: 11400000, guid: d6147051832479a469a4d2637fe2dde6, type: 2}
     Amount: 50
   - Item: {fileID: 11400000, guid: 55562f6b7ee548b4f922695ef554c0b2, type: 2}
@@ -23,9 +23,9 @@ MonoBehaviour:
     Amount: 50
   - Item: {fileID: 11400000, guid: 170cf6a84ed15644e9e2c649628c1483, type: 2}
     Amount: 1
-  - Item: {fileID: 11400000, guid: 170cf6a84ed15644e9e2c649628c1483, type: 2}
+  - Item: {fileID: 11400000, guid: 824258f64e6fa714ba8535d77ff60f36, type: 2}
     Amount: 1
-  - Item: {fileID: 11400000, guid: 45c62a3c47d17244faa8a7a148189006, type: 2}
+  - Item: {fileID: 11400000, guid: 5c139b3da7f407241a1cceafb57305ff, type: 2}
     Amount: 1
   - Item: {fileID: 11400000, guid: 45c62a3c47d17244faa8a7a148189006, type: 2}
     Amount: 1
