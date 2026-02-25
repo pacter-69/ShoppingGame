@@ -181,9 +181,4 @@ public class InventoryUI : MonoBehaviour
     {
         return MoneyTextObject.GetComponent<UpdateMoneyText>().GetMoney() - itemValue >= 0;
     }
-
-    public ItemSlotUI GetSelectedItemSlotUI()
-    {
-        return selectedSlot.GetComponent<ItemSlotUI>();
-    }
 }

@@ -8,6 +8,4 @@ public class ItemBase : ScriptableObject
     public Sprite ImageUI;
     public bool IsStackable;
     public int cost;
-    public string nameTextKey;
-    public string descriptionTextKey;
 }
