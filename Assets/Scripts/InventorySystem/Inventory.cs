@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewInventory", menuName = "Inventory System/Inventory")]
 public class Inventory : ScriptableObject
 {
-    // NOTE: One slot can contain multiple items of one type
-
     [SerializeField]
     List<ItemSlot> Slots;
     public int Length => Slots.Count;

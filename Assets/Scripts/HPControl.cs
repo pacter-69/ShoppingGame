@@ -9,11 +9,13 @@ public class HPControl : MonoBehaviour, IConsume
 
     void OnDamage()
     {
-        HP=HP-10;
+        HP = HP - 10;
+
         if (HP <= 0)
         {
             SceneManager.LoadScene("Ending");
         }
+
         OnHPChange?.Invoke(HP);
     }
     void OnHealth(int h)
@@ -24,6 +26,7 @@ public class HPControl : MonoBehaviour, IConsume
         {
             HP = 100;
         }
+
         OnHPChange?.Invoke(HP);
     }
 

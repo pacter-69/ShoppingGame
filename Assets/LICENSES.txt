@@ -1,1 +1,26 @@
-Place here all the licenses for your assets:
+
+
+Glass sword © 2026 by Raul Romero Morer is licensed under Creative Commons Attribution-ShareAlike 4.0 International. 
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+
+########################################################################################################################
+
+BotonInicio  © 2026 by Pol Anguita Morales is licensed under Creative Commons Attribution-ShareAlike 4.0 International. 
+To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
+
+########################################################################################################################
+
+Shop Background  © 2026 by Aleix Domenech Corbella is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+########################################################################################################################
+
+Pixelart Buttons 1, 2 and 3  © 2026 by Aleix Domenech Corbella is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+########################################################################################################################
+
+Shop and Inventory UI Pixelart © 2026 by Aleix Domenech Corbella is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International.
+To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+########################################################################################################################

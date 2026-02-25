@@ -5,19 +5,20 @@ using UnityEngine;
 public class InventoryUI : MonoBehaviour
 {
     public Inventory Inventory;
-    public ItemSlotUI SlotPrefab;
+    public ItemSlotUI slotPrefab;
     public bool isPlayer;
 
     [SerializeField]
     private GameObject selectedSlot;
 
-    public GameObject MoneyTextObject;
+    public GameObject moneyTextObject;
 
     public GameObject consumer;
 
     List<GameObject> itemSlotList;
 
     public event Action<GameObject> OnUsedItem;
+    public static event Action<string> OnGlobalText;
 
     void Start()
     {
@@ -72,7 +73,7 @@ public class InventoryUI : MonoBehaviour
 
     private GameObject AddSlot(ItemSlot itemSlot)
     {
-        var element = Instantiate(SlotPrefab, Vector3.zero, Quaternion.identity, transform);
+        var element = Instantiate(slotPrefab, Vector3.zero, Quaternion.identity, transform);
 
         element.Initialize(itemSlot, this);
 
@@ -89,21 +90,24 @@ public class InventoryUI : MonoBehaviour
                 (item as ConsumableItem).Use(consumer.GetComponent<IConsume>());
                 Inventory.RemoveItem(item);
                 OnUsedItem?.Invoke(selectedSlot);
+                OnGlobalText?.Invoke("ITEM_USED");
             }
             else if (item is Weapon)
             {
                 UnselectCurrentItem();
                 (item as Weapon).SharpenWeapon();
-                Debug.Log ((item as Weapon).GetDurability());
-                if ((item as Weapon).GetDurability()<=0){
+
+                if ((item as Weapon).GetDurability()<=0)
+                {
                     Inventory.RemoveItem(item);
-                    
-                    }
+                }
+
                 OnUsedItem?.Invoke(selectedSlot);
+                OnGlobalText?.Invoke("ITEM_USED");
             }
             else
             {
-                Debug.Log("�Este item no es consumible!");
+                OnGlobalText?.Invoke("ITEM_NOTUSED");
             }
         }
     }
@@ -119,9 +123,9 @@ public class InventoryUI : MonoBehaviour
     private void SelectCurrentItem(GameObject selectItem)
     {
         if (selectedSlot != null) UnselectCurrentItem();
+
         selectedSlot = selectItem;
         selectItem.GetComponent<ItemSlotUI>().selectedAlert.SetActive(true);
-
     }
 
     private void UnselectCurrentItem()
@@ -141,28 +145,31 @@ public class InventoryUI : MonoBehaviour
 
     private void AddMoney(int value)
     {
-        MoneyTextObject.GetComponent<UpdateMoneyText>().UpdateMoney(value);
+        moneyTextObject.GetComponent<UpdateMoneyText>().UpdateMoney(value);
     }
 
     public void SellItemToOtherInventory(InventoryUI otherInventory)
     {
-        int itemCost = selectedSlot.GetComponent<ItemSlotUI>().GetItem().cost;
-
-        if (otherInventory.CanBuyItem(itemCost) && selectedSlot.GetComponent<ItemSlotUI>().GetInventoryUI() == this)
+        if (selectedSlot)
         {
-            ItemSlotUI selectedSlotUI = selectedSlot.GetComponent<ItemSlotUI>();
+            int itemCost = selectedSlot.GetComponent<ItemSlotUI>().GetItem().cost;
 
-            Inventory.RemoveItem(selectedSlotUI.GetItem());
-            otherInventory.Inventory.AddItem(selectedSlotUI.GetItem());
+            if (otherInventory.CanBuyItem(itemCost) && selectedSlot.GetComponent<ItemSlotUI>().GetInventoryUI() == this)
+            {
+                ItemSlotUI selectedSlotUI = selectedSlot.GetComponent<ItemSlotUI>();
 
-            AddMoney(itemCost);
-            otherInventory.AddMoney(-itemCost);
+                Inventory.RemoveItem(selectedSlotUI.GetItem());
+                otherInventory.Inventory.AddItem(selectedSlotUI.GetItem());
 
-            Debug.Log("�Transition made!");
-        }
-        else
-        {
-            Debug.Log("Some party doesn't have enough resources for this transaction...");
+                AddMoney(itemCost);
+                otherInventory.AddMoney(-itemCost);
+
+                OnGlobalText?.Invoke("ITEM_TRANS");
+            }
+            else
+            {
+                OnGlobalText?.Invoke("TRANS_MSG");
+            }
         }
     }
 
@@ -180,17 +187,17 @@ public class InventoryUI : MonoBehaviour
             AddMoney(itemCost);
             otherInventory.AddMoney(-itemCost);
 
-            Debug.Log("�Transition made!");
+            OnGlobalText?.Invoke("ITEM_TRANS");
         }
         else
         {
-            Debug.Log("Some party doesn't have enough resources for this transaction...");
+            OnGlobalText?.Invoke("TRANS_MSG");
         }
     }
 
     private bool CanBuyItem(int itemValue)
     {
-        return MoneyTextObject.GetComponent<UpdateMoneyText>().GetMoney() - itemValue >= 0;
+        return moneyTextObject.GetComponent<UpdateMoneyText>().GetMoney() - itemValue >= 0;
     }
 
     public ItemSlotUI GetSelectedItemSlotUI()

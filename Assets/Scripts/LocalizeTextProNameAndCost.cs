@@ -28,6 +28,7 @@ public class LocalizeTextProNameAndCost : MonoBehaviour
 
             textValue.text = GameplayLocalizer.GetText(nameKey) + $": {selectedItem.cost} " + GameplayLocalizer.GetText(costKey);
         }
+        else textValue.text = "";
     }
 }
 

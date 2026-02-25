@@ -7,11 +7,8 @@ using UnityEngine.UIElements;
 
 public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    // NOTE: Inventory UI slots support drag&drop,
-    // implementing the Unity provided interfaces by events system
-
-    public UnityEngine.UI.Image Image;
-    public TextMeshProUGUI AmountText;
+    public UnityEngine.UI.Image image;
+    public TextMeshProUGUI amountText;
 
     private Canvas canvas;
     private Transform parent;
@@ -26,11 +23,11 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void Initialize(ItemSlot slot, InventoryUI inventory)
     {
-        Image.sprite = slot.Item.ImageUI;
-        Image.SetNativeSize();
+        image.sprite = slot.Item.ImageUI;
+        image.SetNativeSize();
 
-        AmountText.text = slot.Amount.ToString();
-        AmountText.enabled = (slot.Amount > 1);
+        amountText.text = slot.Amount.ToString();
+        amountText.enabled = (slot.Amount > 1);
 
         item = slot.Item;
         this.slot = slot;
@@ -39,19 +36,13 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // We need canvas as new UI reference (lazy initialization)
         if (!canvas) canvas = GetComponentInParent<Canvas>();
 
-        // Store previous reference position
         parent = transform.parent;
 
-        // Change parent of our item to the canvas
         transform.SetParent(canvas.transform, true);
-
-        // And set it as last child to be rendered on top of UI
         transform.SetAsLastSibling();
 
-        // Unselect item from inventory
         OnGrabbedItemSlot?.Invoke();
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
@@ -59,16 +50,13 @@ public class ItemSlotUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
 
     public void OnDrag(PointerEventData eventData)
     {
-        // Moving object around screen using mouse delta
         transform.localPosition += new Vector3(eventData.delta.x, eventData.delta.y, 0);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        // Changing parent back to slot
         transform.SetParent(parent.transform);
 
-        // And centering item position
         transform.localPosition = Vector3.zero;
 
         GetComponent<CanvasGroup>().blocksRaycasts = true;
