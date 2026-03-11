@@ -195,7 +195,6 @@ public class InventoryUI : MonoBehaviour
 
     public ItemSlotUI GetSelectedItemSlotUI()
     {
-        if (selectedSlot) return selectedSlot.GetComponent<ItemSlotUI>();
-        else return null;
+        return selectedSlot.GetComponent<ItemSlotUI>();
     }
 }

@@ -6,6 +6,7 @@ public class HPControl : MonoBehaviour, IConsume
 {
     int HP = 100;
     public static event Action<int> OnHPChange;
+    public static event Action<bool> OnDeath;
 
     void OnDamage()
     {
