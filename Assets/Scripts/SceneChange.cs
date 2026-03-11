@@ -12,6 +12,7 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Gameplay");
     }
+
     public void ChangeToEnding()
     {
         SceneManager.LoadScene("Ending");
@@ -30,6 +31,7 @@ public class SceneChange : MonoBehaviour
     private void Update()
     {
         GameObject sceneManager = GameObject.Find("SceneManager");
+
         if (sceneManager != gameObject) Destroy(sceneManager);
     }
 }
