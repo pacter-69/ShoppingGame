@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class LanguageButton : MonoBehaviour, IPointerClickHandler
@@ -21,6 +22,7 @@ public class LanguageButton : MonoBehaviour, IPointerClickHandler
 
         GameplayLocalizer.SetLanguage(Language);
 
+        // Make sure button displays current language text
         localizedText.text = Language.ToString();
     }
 }
