@@ -5,6 +5,7 @@ public class LocalizeTextProFields : MonoBehaviour
 {
     public InventoryUI playerInventory;
     private TextMeshPro textValue;
+
     private ItemSlotUI selectedSlot;
 
     void Start()
@@ -33,6 +34,5 @@ public class LocalizeTextProFields : MonoBehaviour
             }
             else textValue.text = "";
         }
-        else textValue.text = "";
     }
 }

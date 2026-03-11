@@ -26,6 +26,5 @@ public class LocalizeTextProDescription : MonoBehaviour
 
             textValue.text = GameplayLocalizer.GetText(descriptionKey);
         }
-        else textValue.text = "";
     }
 }
