@@ -10,12 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96039d3130db6714a8f5b64c901d9277, type: 3}
-  m_Name: GlassSword
+  m_Name: GlassSword2
   m_EditorClassIdentifier: Assembly-CSharp::Sword
-  Name: Glass Sword
-  description: Just in case
-  ImageUI: {fileID: -406505386535922096, guid: 1ade9f5a27271954b9a22be5256d99f9, type: 3}
+  Name: 
+  description: 
+  ImageUI: {fileID: 0}
   IsStackable: 0
-  cost: 999
-  damage: 9999999999999
-  durability: 1
+  cost: 0
+  nameTextKey: GSWORD_NAME
+  descriptionTextKey: GSWORD_DESC
+  costTextKey: ITEM_COST
+  damage: 0
+  damageTextKey: WEAPON_DAMAGE
+  durability: 0
+  durabilityTextKey: WEAPON_DURABILITY

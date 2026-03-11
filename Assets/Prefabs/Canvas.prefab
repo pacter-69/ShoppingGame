@@ -1985,7 +1985,7 @@ GameObject:
   - component: {fileID: 1209595021209937497}
   - component: {fileID: 611214454170036809}
   - component: {fileID: 5324443830309948427}
-  - component: {fileID: 5751025022158595227}
+  - component: {fileID: 1556435857619178695}
   m_Layer: 5
   m_Name: ItemNameAndCost
   m_TagString: Untagged
@@ -2156,7 +2156,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 611214454170036809}
   m_maskType: 0
---- !u!114 &5751025022158595227
+--- !u!114 &1556435857619178695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2165,9 +2165,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6397245351948910585}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4601d0ad708e8848b7e455ef52143c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 571532a5b4bb1a840a05adba0a73f7e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  playerInventory: {fileID: 7732474719375069718}
 --- !u!1 &7192848031579220586
 GameObject:
   m_ObjectHideFlags: 0

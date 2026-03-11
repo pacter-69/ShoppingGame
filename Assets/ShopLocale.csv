@@ -5,6 +5,7 @@ GAMEPLAY_MENU_USE;Use;Utilitzar;Usar
 ITEM_COST;coins;monedes;monedas
 WEAPON_DAMAGE;Damage;Mal;Golpe
 WEAPON_DURABILITY;Durability;Durabilitat;Durabilidad
+CONSUMABLE_HP;Healing points;Punts de curacio;Puntos de curacion
 APPLE_NAME;Apple;Poma;Manzana
 APPLE_DESC;A tasty and classic red apple!;Una deliciosa i classica poma vermella!;Una deliciosa y clasica manzana roja!
 GSWORD_NAME;Glass sword; Espasa de vidre; Espada de cristal;
