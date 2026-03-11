@@ -3,12 +3,13 @@ GAMEPLAY_MENU_BUY;Buy;Comprar;Comprar
 GAMEPLAY_MENU_SELL;Sell;Vendre;Vender
 GAMEPLAY_MENU_USE;Use;Utilitzar;Usar
 ITEM_COST;coins;monedes;monedas
+CL_TEXT;Change language:;Canviar idioma:;Cambiar idioma:;
 WEAPON_DAMAGE;Damage;Mal;Golpe
 WEAPON_DURABILITY;Durability;Durabilitat;Durabilidad
 CONSUMABLE_HP;Healing points;Punts de curacio;Puntos de curacion
 APPLE_NAME;Apple;Poma;Manzana
 APPLE_DESC;A tasty and classic red apple!;Una deliciosa i classica poma vermella!;Una deliciosa y clasica manzana roja!
-GSWORD_NAME;Glass sword; Espasa de vidre; Espada de cristal;
+GSWORD_NAME;Glass sword; Espasa de vidre;Espada de cristal;
 GSWORD_DESC;You sense a vague magical force emmanating from this weapon...;Sents una vaga aura magica emanant d'aquest arma...;Sientes una vaga aura magica emanando de este arma...
 POTION_NAME;Potion;Pocio;Pocion
 POTION_DESC;It's not red. Maybe you shouldn't drink it.;No es vermella. Potser no te l'hauries de beure.;No es roja. Alomejor no te la tendrias que beber;
@@ -17,4 +18,8 @@ MEAT_DESC;It's red and square-like. You feel like you've seen this before; Es ve
 BREAD_NAME;Melon bread;Pa de melo;Meronpan
 BREAD_DESC;A round and spongeous bread ressembling a melon, though not melon-flavoured. Originally from japan.;Un rodonet y esponjos pa semblant a un melo, encara que no te sabor a melo. Es originari del Japo.;Un redondito y esponjoso pan parecido a un melon, aunque no con sabor a melon. Es originario de Japon.
 PENCIL_NAME;Pencil;Llapis;Lapiz
-PENCIL_DESC;You don't know why, but you have the certainty that this is the most powerful item you've ever seen.; No saps perque, pero tens la certesa de que aquest es el objecte mes poderos que has vist mai; No sabes porque, pero tienes la certeza de que este es el objeto mas poderoso que has visto nunca;
+PENCIL_DESC;You don't know why, but you have the certainty that this is the most powerful item you've ever seen.;No saps perque, pero tens la certesa de que aquest es el objecte mes poderos que has vist mai;No sabes porque, pero tienes la certeza de que este es el objeto mas poderoso que has visto nunca
+TRANS_MSG;This transaction is not possible...;Aquesta transaccio no es possible...;Esta transaccion no es posible...
+ITEM_BUY;Item bought!;Item comprat!;Item comprado!
+ITEM_SOLD;Item sold!;Item vengut!;Item vendido!
+ITEM_USED;Item used!;Item utilitzat!;Item usado!

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Sword
   Name: 
   description: 
-  ImageUI: {fileID: 0}
+  ImageUI: {fileID: 5806247343882902020, guid: 62a321e52e61bc84499ba3fa888346ec, type: 3}
   IsStackable: 0
-  cost: 0
+  cost: 500
   nameTextKey: PENCIL_NAME
   descriptionTextKey: PENCIL_DESC
   costTextKey: ITEM_COST
   damage: 0
   damageTextKey: WEAPON_DAMAGE
-  durability: 0
+  durability: 1000
   durabilityTextKey: WEAPON_DURABILITY
