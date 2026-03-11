@@ -20,6 +20,7 @@ BREAD_DESC;A round and spongeous bread ressembling a melon, though not melon-fla
 PENCIL_NAME;Pencil;Llapis;Lapiz
 PENCIL_DESC;You don't know why, but you have the certainty that this is the most powerful item you've ever seen.;No saps perque, pero tens la certesa de que aquest es el objecte mes poderos que has vist mai;No sabes porque, pero tienes la certeza de que este es el objeto mas poderoso que has visto nunca
 TRANS_MSG;This transaction is not possible...;Aquesta transaccio no es possible...;Esta transaccion no es posible...
-ITEM_BUY;Item bought!;Item comprat!;Item comprado!
-ITEM_SOLD;Item sold!;Item vengut!;Item vendido!
+ITEM_TRANS;Transaction made;Transaccio feta;Transaccion hecha
 ITEM_USED;Item used!;Item utilitzat!;Item usado!
+ITEM_NOTUSED;This item is not usable;Aquest item no es utilitzable;Este item no es usable
+SPACEBAR_MSG;Press the space bar to recieve damage;Prem la barra espaciadora per rebre mal;Presiona la barra espaciadora para recibir golpes
