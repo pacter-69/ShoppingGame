@@ -291,6 +291,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &421293126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4103553569294219503, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6394315070118038157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +511,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a438f357ebf9f48bb61b1db8757213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneChange
+--- !u!1 &1684326694 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7192848031579220586, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+    type: 3}
+  m_PrefabInstance: {fileID: 6394315070118038157}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6394315070118038157
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -628,6 +640,17 @@ PrefabInstance:
       propertyPath: consumer
       value: 
       objectReference: {fileID: 350883654}
+    - target: {fileID: 7732474719375069718, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+        type: 3}
+      propertyPath: slotPrefab
+      value: 
+      objectReference: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
+        type: 3}
+    - target: {fileID: 7732474719375069718, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+        type: 3}
+      propertyPath: moneyTextObject
+      value: 
+      objectReference: {fileID: 421293126}
     - target: {fileID: 8253230548518974313, guid: fbfae6150a4127347aabc5bbf82ad1a4,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -638,6 +661,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9216932684259843287, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+        type: 3}
+      propertyPath: slotPrefab
+      value: 
+      objectReference: {fileID: 4308011617311330013, guid: a349603013456c546acd77ef6b465b3e,
+        type: 3}
+    - target: {fileID: 9216932684259843287, guid: fbfae6150a4127347aabc5bbf82ad1a4,
+        type: 3}
+      propertyPath: moneyTextObject
+      value: 
+      objectReference: {fileID: 1684326694}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
