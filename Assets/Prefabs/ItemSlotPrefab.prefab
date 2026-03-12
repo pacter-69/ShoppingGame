@@ -80,8 +80,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add1795e3b4296c43a73c44023b7c5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemSlotUI
-  Image: {fileID: 5942939155442774167}
-  AmountText: {fileID: 4894285389737324033}
+  image: {fileID: 0}
+  amountText: {fileID: 0}
   selectedAlert: {fileID: 6118068185449570905}
 --- !u!61 &4864294292912650355
 BoxCollider2D:
